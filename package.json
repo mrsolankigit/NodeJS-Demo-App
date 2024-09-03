@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "mocha",
-    "build": "webpack --config webpack.config.js"
+    "build": "echo 'Build script not defined yet'"
   },
   "keywords": [],
   "author": "Valentine Stephen",
