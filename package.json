@@ -1,16 +1,19 @@
 {
   "name": "simple-nodejs-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple Node.js app for Jenkins pipeline demonstration",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "Valentine Stephen",
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "mocha": "^10.7.3"
   }
 }
