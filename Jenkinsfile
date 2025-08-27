@@ -45,6 +45,7 @@ pipeline {
                 script {
                     // Deploy script or commands can be added here
                     bat 'echo Deploying the application...'
+                    bat npm run Server.js
                 }
             }
         }
