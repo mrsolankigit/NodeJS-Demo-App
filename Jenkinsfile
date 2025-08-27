@@ -45,7 +45,8 @@ pipeline {
                 script {
                     // Deploy script or commands can be added here
                     bat 'echo Deploying the application...'
-                    bat 'npm start'
+                    //bat 'npm start'
+                    bat 'start cmd.exe /C "server.js"'
                 }
             }
         }
@@ -53,7 +54,7 @@ pipeline {
             steps {
                 script {
                     // Wait for a specified duration (e.g., 60 seconds)
-                    sleep 180 // Time in seconds
+                    sleep 60 // Time in seconds
 
                     // Terminate all Node.js processes
                     bat 'taskkill /F /IM node.exe'
