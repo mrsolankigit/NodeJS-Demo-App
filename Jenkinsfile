@@ -49,7 +49,20 @@ pipeline {
                 }
             }
         }
-    }
+        stage('Wait and Stop Server') {
+            steps {
+                script {
+                    // Wait for a specified duration (e.g., 60 seconds)
+                    sleep 180 // Time in seconds
+
+                    // Terminate all Node.js processes
+                    bat 'taskkill /F /IM node.exe'
+                    echo "Node.js server stopped."
+                }
+            }
+        }    
+       
+    } // end of Stages
 
     post {
         always {
