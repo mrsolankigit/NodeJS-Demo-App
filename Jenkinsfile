@@ -46,7 +46,7 @@ pipeline {
                     // Deploy script or commands can be added here
                     bat 'echo Deploying the application...'
                     //bat 'npm start'
-                    bat 'start cmd.exe /C "server.js"'
+                    bat 'npm run server.js'
                 }
             }
         }
