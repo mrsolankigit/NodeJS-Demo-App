@@ -47,21 +47,12 @@ pipeline {
                     bat 'echo Deploying the application...'
                     //bat 'npm start'
                     bat 'node server.js'
+                    sleep 30
+                    bat 'taskkill /F /IM node.exe'
                 }
             }
         }
-        stage('Wait and Stop Server') {
-            steps {
-                script {
-                    // Wait for a specified duration (e.g., 60 seconds)
-                    sleep 60 // Time in seconds
-
-                    // Terminate all Node.js processes
-                    bat 'taskkill /F /IM node.exe'
-                    echo "Node.js server stopped."
-                }
-            }
-        }    
+        
        
     } // end of Stages
 
